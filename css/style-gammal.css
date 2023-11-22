@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
-
 body {
     margin: 0;
 }
 
-/* Topbar med hemsidans namn */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-.topbar-main {
+/* h1{ font-size:calc(1.25rem + 1.5vw); }
+h2{ font-size:calc(1rem + 2vw); }
+p{ font-size:calc(1rem + 0.5vw); }
+a{ font-size:calc(1rem + 1.5vw); } */
+
+.navbar {
     display: flex; 
     align-items:center;
     width: 100%; height: 70px;
@@ -14,23 +17,19 @@ body {
     color:white;
 }
 
-.topbar-main h1 {
-    font-size:calc(1.25rem + 1.5vw);
+.navbar h1 {
+    font-size:calc(1.25rem + 1vw);
     font-family: Nunito, sans-serif;
     font-weight: 100;
     margin-left: 20px;
 }
 
-/* Huvuddiv som kommer att hålla resten av sidans innehåll */
-
-.main-content-div { 
+.main-content { 
     width: 70%; height: fit-content;
     margin: auto;
 }
 
-/* Navigationsmeny */
-
-.nav-main {
+.category-nav-container {
     margin-top: 20px;
     width: 100%; height: fit-content;
     display: flex;
@@ -38,62 +37,56 @@ body {
     align-items: end;
 }
 
-.nav-container {
+.category-nav {
     width: fit-content; height: fit-content;
     border: 2px;
     border-bottom-style: solid;
     padding: 5px;
 }
 
-.nav-container a {
+.category-nav a {
     padding: 10px;
     font-family: Nunito, sans-serif;
     font-weight: 300;
     font-size:calc(1rem + 0.1vw);
 }
 
-.nav-container a:hover {
+a:hover {
     cursor: pointer;
 }
 
 .dropdown-btn {
     display: none;
-    width: 35px;     /* fixa detta senare */
-    height: 35px;     /* fixa detta senare */
-    background-color: white;
-    border: none;
-    text-align: center;
-    font-size: 35px;     /* fixa detta senare */
+    width: 30px;
+    margin-left: 10px;
 }
 
-/* Anpassning för mindre skärmar */
-
 @media screen and (min-width: 640px) and (max-width: 1024px) {
-    .main-content-div {
+    .main-content {
         width: 85%;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .topbar-main {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .main-content-div {
+    .main-content {
         width: 95%;
     }
 
-    .nav-main {
+    .category-nav-container {
         justify-content: start;
     }
 
-    .nav-container {
+    .category-nav {
         display: none;
     }
 
     .dropdown-btn {
         display: block;
+    }
+
+    .navbar {
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 }
