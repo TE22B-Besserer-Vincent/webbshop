@@ -1,4 +1,4 @@
-console.log("Hello!")
+/* console.log("Hello!")
 
 function myFunction() {
   console.log("Hello again!")
@@ -13,4 +13,4 @@ window.onclick = function(event) {
         document.getElementsByClassName("screen-tint")[0].style.display = "none"
       } else { dropdown.style.display = "flex"; document.getElementsByClassName("screen-tint")[0].style.display = "flex";  }
     }  
-} 
+}  */
