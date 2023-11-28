@@ -4,5 +4,46 @@ body {
     margin: 0;
 }
 
-/* Topbar med hemsidans namn */
+/* Styling för hemsidans header */
 
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navbar som används för att  */
+
+.navbar {
+    display: none;
+    max-width: 1200px;
+    width: fit-content;
+    margin: 40px auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px black solid;
+}
+
+.navbar a {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar i {
+    margin-left: 3px;
+}
+
+@media (min-width: 600px) {  
+    .navbar {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
