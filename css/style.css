@@ -41,6 +41,11 @@ header {
     margin-left: 3px;
 }
 
+.navbar img {
+    display: flex;
+    width: 20px;
+}
+
 /* Styling för container som ska hålla produkterna. */
 
 .container {
@@ -104,6 +109,10 @@ header {
 
     .navbar {
         display: flex;
+    }
+
+    .buttons {
+        display: none;
     }
 }
 
