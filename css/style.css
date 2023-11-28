@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Styling för hemsidans header */
@@ -13,7 +16,7 @@ header {
     text-align: center;
 }
 
-/* Navbar som används för att  */
+/* Icke-funktionell navbar som egentligen används för att leta efter produkter  */
 
 .navbar {
     display: none;
@@ -38,12 +41,88 @@ header {
     margin-left: 3px;
 }
 
+/* Styling för container som ska hålla produkterna. */
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styling av produkteboxarna */
+
+.product {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+}
+
+.product img {
+    width: 100%;
+    border: 0.5px black solid
+}
+
+.product h2 {
+    font-size: max(2vw, 16px);
+}
+
+.product p {
+    font-size: max(1.8vw, 14px); 
+}
+.product button {
+    padding: 8px 30px;
+    border: none;
+    border-radius: 2px;
+    color: black;
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+/* Anpassning för tablets  */
+
 @media (min-width: 600px) {  
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    .product button {
+        padding: 8px 3vw;
+    }
+
+    .product h2 {
+        font-size: max(1.8vw, 14px);
+    }
+    
+    .product p {
+        font-size: max(1.6vw, 12px); 
+    }
+
     .navbar {
         display: flex;
     }
 }
 
-@media (min-width: 1024px) {
+/* Anpassning för datorer */
 
+@media (min-width: 1024px) {
+    .product {
+        width: calc(25% - 20px);
+    }
+
+    .product button {
+        padding: 8px 2vw ;
+    }
+
+    .product h2 {
+        font-size: max(0.9vw, 14px);
+    }
+    
+    .product p {
+        font-size: max(0.8vw, 12px);
+    }
 }
