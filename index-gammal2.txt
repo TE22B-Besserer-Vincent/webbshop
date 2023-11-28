@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="screen-tint"></div>
+    <div class="topbar-main">
+        <h1>Flugfiske</h1>
+        <div class="buttons-container">
+            <button href="hej.com" class="menu-btn">
+                <i class="fa fa-solid fa-bars"></i>
+            </button>
+            <button onclick="myFunction()" href="hej.com" class="cart-btn">
+                <span class="">Korg</span>
+            </button> 
+        </div>
+    </div>
+    <div class="main-content-div">
+        <div class="nav-main">
+            <div class="nav-container">
+                <a tabindex="0">Drag</a>
+                <a tabindex="0">Fiskespö</a>
+                <a tabindex="0">Kläder</a>
+                <a tabindex="0">Övrigt</a>
+            </div>
+        </div>
+        <div class="listings-main">
+            <h1 class="listings-title">NYHETER</h1>
+            <div class="listings-row">
+                <div class="products-container">
+                    <div class="product">
+                        <img class="product-img" alt="ett fiskespö" src="img/flugspö.webp">
+                        <div class="product-info">
+                            <div class="product-desc">
+                                <span class="product-name">Flugspö</span>
+                                <span class="product-price">799 kr</span>
+                            </div>
+                            <div class="product-buy">
+                                <button class="product-purchase-btn">Köp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="product-img" alt="ett fiskespö" src="img/flugabolivengrey.webp">
+                        <div class="product-info">
+                            <div class="product-desc">
+                                <span class="product-name">Fluga, Gul</span>
+                                <span class="product-price">299 kr</span>
+                            </div>
+                            <div class="product-buy">
+                                <button class="product-purchase-btn">Köp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="product-img" alt="ett fiskespö" src="img/fluglina.webp">
+                        <div class="product-info">
+                            <div class="product-desc">
+                                <span class="product-name">Fluglina</span>
+                                <span class="product-price">499 kr</span>
+                            </div>
+                            <div class="product-buy">
+                                <button class="product-purchase-btn">Köp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="product-img" alt="ett fiskespö" src="img/vadarbyxor.webp">
+                        <div class="product-info">
+                            <div class="product-desc">
+                                <span class="product-name">Vadarbyxor</span>
+                                <span class="product-price">999 kr</span>
+                            </div>
+                            <div class="product-buy">
+                                <button class="product-purchase-btn">Köp</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="listings-title">ERBJUDANDEN</h1>
+            <div class="listings-row">
+                <div class="products-container">
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

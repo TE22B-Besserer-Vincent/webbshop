@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+body {
+    margin: 0;
+}
+
+/* Topbar med hemsidans namn och knappar */
+
+.topbar-main {
+    display: flex; 
+    align-items:center;
+    width: 100%; height: 70px;
+    background-color: #3A4D39;
+    color:white;
+}
+
+.topbar-main h1 {
+    font-size:calc(1.25rem + 1.5vw);
+    font-family: Nunito, sans-serif;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; align-items: center;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    width: fit-contents; height: 50px;
+    gap: 10px   ;
+    color: white;
+    right: 20px;
+}
+
+.menu-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: #A9B388;
+    font-size:calc(0.9rem + 0.1vw);
+    color: white;
+}
+
+/* Huvuddiv som kommer att hålla resten av sidans innehåll */
+
+.main-content-div { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%; height: fit-content;
+    margin: auto;
+}
+
+/* Navigationsmeny */
+
+.nav-main {
+    margin-top: 20px;
+    width: 100%; height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.nav-container {
+    width: fit-content; height: fit-content;
+    border: 2px;
+    border-bottom-style: solid;
+    padding: 5px;
+}
+
+.nav-container a {
+    padding: 10px;
+    font-family: Nunito, sans-serif;
+    font-weight: 300;
+    font-size:calc(1rem + 0.1vw);
+}
+
+.nav-container a:hover {
+    cursor: pointer;
+}
+
+/* Produkterna */
+
+.listings-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 80%;
+    height: fit-content;
+}
+
+.listings-title {
+    width: 100%;
+    height: fit-content;
+    font-family: Nunito, sans-serif;
+    font-size:calc(1rem + 0.40vw);
+    font-weight: 200;
+    color: black;
+}
+
+.listings-row {
+    width: 90%;
+    height: fit-content;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.product {
+    box-sizing: border-box;
+    border: 1.5px solid #000;
+    overflow: hidden;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    aspect-ratio: 0.80;
+}
+
+.product-img {
+    width: 100%; 
+}
+
+.product-info {
+    display: flex;
+}
+
+.product-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    color: white;
+}
+
+.product-purchase-btn {
+    border: none;
+    width: 100%;
+    height: 80%;
+    background-color: #A9B388;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.product-desc {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.product-name {
+    margin-left: 2px;
+    font-size:calc(0.2rem + 1.1vw);
+    font-family: Nunito, sans-serif;
+    font-weight: 500;
+}
+
+.product-price {
+    margin-left: 2px;
+    font-size:calc(0.2rem + 0.9vw);
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 100px;
+}
+
+
+/* Anpassning för mindre skärmar */
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    .main-content-div { width:80%; }
+    .cart-btn { padding: 10px 12.5px; }
+    .product { flex-basis: calc(48% - 20px); }
+    .listings-title { display: flex; justify-content: start; font-size:calc(1.5rem + 0.5vw); }
+    .product-price { font-size:calc(0.2rem + 1.4vw); }
+    .product-name { font-size:calc(0.2rem + 1.6vw); }
+    .listings-title { font-size:calc(1rem + 0.5vw); }
+}
+
+@media screen and (max-width: 640px) {
+    .topbar-main { display: flex; text-align: center; justify-content: center; }
+    .main-content-div { width: 75%; }
+    .cart-btn { padding: 10px 10px; }
+    .nav-main { justify-content: start; }
+    .nav-container { display: none; }
+    .menu-btn { display: flex; }
+    .product { flex-basis: calc(98% - 20px); }
+    .listings-title { display: flex; justify-content: center; font-size:calc(1.5rem + 0.5vw); }
+    .product-price { font-size:calc(0.4rem + 1.8vw); }
+    .product-name { font-size:calc(0.4rem + 2vw); }
+    .listings-title { font-size:calc(1.5rem + 0.5vw); }
+}
