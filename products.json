@@ -2,15 +2,59 @@
     "products": [
         {
             "index": 1,
-            "name": "Produkt 1",
-            "price": "299.99",
-            "img": "./img/fluglina.webp"
+            "name": "Fluga - Gul",
+            "price": "129,99 kr",
+            "img": "./img/flugabolivengrey.webp",
+            "imgalt": "En fluga för fiske"
         },
         {
             "index": 2,
-            "name": "Produkt 2",
-            "price": "350.99",
-            "img": "./img/fluglina.webp"
+            "name": "Fluglina",
+            "price": "129.99 kr",
+            "img": "./img/fluglina.webp",
+            "imgalt": "En flugalina"
+        },
+        {
+            "index": 3,
+            "name": "Flugspö",
+            "price": "499.99 kr",
+            "img": "./img/flugspö.webp",
+            "imgalt": "En flugalina"
+        },
+        {
+            "index": 4,
+            "name": "Vadarbyxor",
+            "price": "649.99 kr",
+            "img": "./img/vadarbyxor.webp",
+            "imgalt": "Ett par vadarbyxor"
+        },
+        {
+            "index": 5,
+            "name": "Fluga - Gul",
+            "price": "129,99 kr",
+            "img": "./img/flugabolivengrey.webp",
+            "imgalt": "En fluga för fiske"
+        },
+        {
+            "index": 6,
+            "name": "Fluga - Gul",
+            "price": "129,99 kr",
+            "img": "./img/flugabolivengrey.webp",
+            "imgalt": "En fluga för fiske"
+        },
+        {
+            "index": 7,
+            "name": "Fluga - Gul",
+            "price": "129,99 kr",
+            "img": "./img/flugabolivengrey.webp",
+            "imgalt": "En fluga för fiske"
+        },
+        {
+            "index": 8,
+            "name": "Fluga - Gul",
+            "price": "129,99 kr",
+            "img": "./img/flugabolivengrey.webp",
+            "imgalt": "En fluga för fiske"
         }
     ]
 }
