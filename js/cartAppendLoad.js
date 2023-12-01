@@ -60,6 +60,17 @@ function AddToCart(id) {
 function addItemToLocalStorage(itemKey, item) {
     const existingItems = JSON.parse(localStorage.getItem(itemKey)) || []; // Hämta localstorage (ifall det finns produkter)
 
+    var duplicate = false;
+
+    // Kollar om produkten redan finns i korgen.
+    existingItems.forEach(element => {
+        if (element.name == item.name) {
+            duplicate = true;
+        }
+    });
+
+    if (duplicate) { return; }
+
     existingItems.push(item); // Lägg till den nya produkten i listan
  
     localStorage.setItem(itemKey, JSON.stringify(existingItems)); // Lägg in nya i localstorage.
