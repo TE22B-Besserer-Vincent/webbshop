@@ -47,7 +47,7 @@ header {
     justify-content: center;
     flex-direction: column;
     width: fit-content;
-    min-width: 20%;
+    min-width: 60%;
     height: 100%;
 }
 
