@@ -55,6 +55,10 @@ header {
     border-radius: 5px;
     background-color: gray;
     border: none;
+    font-size: 15px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
 }
 
 /* Styling för container som ska hålla produkterna. */

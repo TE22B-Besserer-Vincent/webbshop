@@ -21,6 +21,7 @@ header {
 .container {
     max-width: 1200px;
     margin: 20px auto;
+    gap: 10px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -50,26 +51,37 @@ header {
 }
 
 .product-info h2 {
-    font-size: max(2vw, 16px);
+    font-size: calc(0.4em + 1rem);
     line-height: 0px;
 }
 
 .product-info p {
-    font-size: max(1.8vw, 14px); 
+    font-size: calc(0.2em + 1rem);
     line-height: 0px;
+}
+
+.quantity {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+    gap: 10px;
+    height: 100%; width: 100%;
+}
+
+.quantity button {
+    padding: 2px 6px;
+    border: none;
+    outline: 1px solid black;
+    cursor: pointer;
 }
 
 @media (min-width: 600px) {  
     .product {
         width: 65%;
-    }
-
-    .product h2 {
-        font-size: max(2vw, 14px);
-    }
-    
-    .product p {
-        font-size: max(1.8vw, 12px); 
     }
 }
 
@@ -78,13 +90,5 @@ header {
 @media (min-width: 1024px) {
     .product {
         width: 50%;
-    }
-
-    .product h2 {
-        font-size: max(1.8vw, 14px);
-    }
-    
-    .product p {
-        font-size: max(1.6vw, 12px);
     }
 }

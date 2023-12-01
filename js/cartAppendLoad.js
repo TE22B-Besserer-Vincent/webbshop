@@ -20,7 +20,7 @@ function LoadProducts() {
 
         // Produktpris
         var price = document.createElement('p');
-        price.textContent = element.price;
+        price.textContent = element.price + " kr";
 
         // Köp knappen
         var button = document.createElement('button');
@@ -36,7 +36,6 @@ function LoadProducts() {
         containerDiv.appendChild(button);
 
         var targetDiv = document.getElementById("produktcontainer");
-
         targetDiv.appendChild(containerDiv);
     });
 }
@@ -47,9 +46,12 @@ function AddToCart(id) {
     products.forEach(element => {
         if (element.index == id) {
             const item = {
+                index: element.index,
                 name: element.name,
                 price: element.price,
-                img: element.img
+                img: element.img,
+                imgalt: element.imgalt,
+                quantity: 1
             }
             addItemToLocalStorage("produkter", item)
         }
