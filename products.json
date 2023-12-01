@@ -1,0 +1,16 @@
+{
+    "products": [
+        {
+            "index": 1,
+            "name": "Produkt 1",
+            "price": "299.99",
+            "img": "./img/fluglina.webp"
+        },
+        {
+            "index": 2,
+            "name": "Produkt 2",
+            "price": "350.99",
+            "img": "./img/fluglina.webp"
+        }
+    ]
+}

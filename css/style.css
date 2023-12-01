@@ -41,9 +41,20 @@ header {
     margin-left: 3px;
 }
 
-.navbar img {
+.navbar form {
     display: flex;
-    width: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar button {
+    position: absolute;
+    right: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: gray;
+    border: none;
 }
 
 /* Styling för container som ska hålla produkterna. */
