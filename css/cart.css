@@ -47,7 +47,7 @@ header {
     justify-content: center;
     flex-direction: column;
     width: fit-content;
-    min-width: 60%;
+    min-width: 50%;
     height: 100%;
 }
 
@@ -62,27 +62,33 @@ header {
 }
 
 .quantity {
-    position: relative;
     display: flex;
-    flex-direction: row;
-    width: fit-content;
     justify-content: end;
-    align-items: center;
     margin-right: 10px;
-    gap: 10px;
-    height: 100%; width: 100%;
+    align-items: center;
+    flex: 1;
 }
 
-.quantity button {
-    padding: 2px 6px;
-    border: none;
-    outline: 1px solid black;
-    cursor: pointer;
+.quantity input {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+/* Köp Knapp */
+
+.container button {
+    padding: 10px 20px;
 }
 
 @media (min-width: 600px) {  
     .product {
         width: 65%;
+    }
+
+    .quantity input {
+        width: 30px;
+        height: 25px;
     }
 }
 
@@ -91,5 +97,10 @@ header {
 @media (min-width: 1024px) {
     .product {
         width: 50%;
+    }   
+
+    .quantity input {
+        width: 25px;
+        height: 20px;
     }
 }

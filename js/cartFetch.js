@@ -12,9 +12,16 @@ function fetchLocalStorage() {
     }
 }
 
+function ClearList() {
+    localStorage.setItem('produkter', []);
+    localStorage.clear();
+}
+
 // Denna funktionen är redan förklarade i andra JS filen.
 function LoadProducts(existingItems) {
+    var totalPrice = 0;
     existingItems.forEach(element => {
+        totalPrice += element.quantity * element.price;
         var containerDiv = document.createElement('div');
         containerDiv.classList.add('product');
 
@@ -29,25 +36,16 @@ function LoadProducts(existingItems) {
         name.textContent = element.name;
 
         var price = document.createElement('p');
-        price.textContent = element.price;
+        price.textContent = element.price + " kr";
 
         var quantity = document.createElement('div');
         quantity.classList.add('quantity');
-        
-        var button1 = document.createElement('button');
-        button1.id = element.index;
-        button1.textContent = '-';
-        button1.id = element.index;
-        var button2 = document.createElement('button');
-        button2.id = element.index;
-        button2.textContent = '+';
-        button2.id = element.index;
-        var quantitiyNum = document.createElement('p')
-        quantitiyNum.innerHTML = element.quantity;
 
-        quantity.appendChild(button1)
-        quantity.appendChild(quantitiyNum)
-        quantity.appendChild(button2)
+        var quantityInput = document.createElement("input");
+        quantityInput.type = 'text';
+        quantityInput.value = element.quantity;
+
+        quantity.appendChild(quantityInput)
 
         productInfo.appendChild(name);
         productInfo.appendChild(price);
@@ -59,6 +57,19 @@ function LoadProducts(existingItems) {
 
         targetDiv.appendChild(containerDiv);
     });
+    var container = document.getElementById('container')
+
+    var total = document.createElement('p');
+    total.textContent = "Totalt: " + totalPrice;
+
+    var purchaseButton = document.createElement("button")
+    purchaseButton.textContent = "Köp"
+    purchaseButton.onclick = function() {
+        ClearList();
+    };
+
+    container.appendChild(total);
+    container.appendChild(purchaseButton);
 }
 
 fetchLocalStorage();
