@@ -77,3 +77,15 @@ function addItemToLocalStorage(itemKey, item) {
  
     localStorage.setItem(itemKey, JSON.stringify(existingItems)); // Lägg in nya i localstorage.
 }
+
+// Funktion för att visa hur många saker som är i korgen
+function CartCountUpdate() {
+    const existingItems = JSON.parse(localStorage.getItem('produkter')) || [];
+    // Uppdatera texten i knappen med längden av localstorage array.
+    var cartCount = document.getElementById("cartCount");
+    if (existingItems.length > 0) {
+        cartCount.innerText = existingItems.length;
+    }
+}
+
+CartCountUpdate();
