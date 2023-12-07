@@ -52,7 +52,7 @@
         {
             "index": 8,
             "name": "Fluga - Gul",
-            "price": 129.99,
+            "price": 129.99,    
             "img": "./img/flugabolivengrey.webp",
             "imgalt": "En fluga för fiske"
         }
