@@ -12,9 +12,13 @@ function fetchLocalStorage() {
     }
 }
 
+// Funktion som rensar korgen.
 function ClearList() {
     localStorage.setItem('produkter', []);
-    localStorage.clear();
+    localStorage.clear(); // Töm localstorage
+    var targetDiv = document.getElementById("container");
+    targetDiv.innerHTML = "";
+    fetchLocalStorage() // Ladda listan igen för att den ska visas som tom.
 }
 
 // Denna funktionen är redan förklarade i andra JS filen.

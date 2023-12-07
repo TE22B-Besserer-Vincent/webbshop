@@ -56,6 +56,8 @@ function AddToCart(id) {
             addItemToLocalStorage("produkter", item)
         }
     });
+
+    CartCountUpdate();
 }
 
 // Funktion som lägger till en produkt i localstorage
