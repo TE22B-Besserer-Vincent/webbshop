@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 
+:root {
+    --menu-color-primary: #40513B;
+    --menu-color-secondary: #EAC696;
+    --text-color-primary: black;
+    --text-color-secondary: white;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,8 +17,8 @@ body {
 /* Styling för hemsidans header */
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--menu-color-primary);
+    color: var(--text-color-secondary);
     padding: 10px;
     text-align: center;
 }
@@ -23,23 +30,18 @@ header {
     max-width: 1200px;
     width: fit-content;
     margin: 40px auto;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    gap: 24px;
     padding-bottom: 5px;
-    border-bottom: 1px black solid;
+    border-bottom: 1px var(--text-color-primary) solid;
 }
 
 .navbar a {
     display: none;
     font-size: 16px;
+    margin-right: 20px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.navbar i {
-    margin-left: 3px;
 }
 
 .navbar form {
@@ -49,28 +51,26 @@ header {
 }
 
 .navbar button {
+    display: flex;
     position: absolute;
     right: 10px;
+    gap: 5px;
     width: fit-content;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; justify-content: center;
     cursor: pointer;
-    gap: 10px;
+    font-weight: bold;
     background-color: transparent;
 }
 
 .cart-icon {
-    width: 25px;
-    height: 25px;
+    width: 25px; height: 25px;
 }
 
 .hamburger-menu {
     display: flex;
     left: 20px;
-    width: 25px;
-    height: 25px;
+    width: 25px; height: 25px;
     position: absolute;
 }
 
@@ -78,7 +78,6 @@ header {
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
     padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
@@ -90,14 +89,13 @@ header {
 .product {
     box-sizing: border-box;
     width: 100%;
-    margin: 0 0 20px;
-    padding: 10px 10px 10px 10px;
-    background-color: white;
+    padding: 10px;
+    background-color: transparent;
 }
 
 .product img {
     width: 100%;
-    border: 0.5px black solid
+    border: 0.5px var(--text-color-primary) solid;
 }
 
 .product h2 {
@@ -111,8 +109,8 @@ header {
     padding: 8px 30px;
     border: none;
     border-radius: 2px;
-    color: black;
-    background-color: darkgray;
+    color: var(--text-color-primary);;
+    background-color: var(--menu-color-secondary);;
     cursor: pointer;
 }
 

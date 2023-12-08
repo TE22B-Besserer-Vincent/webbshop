@@ -61,17 +61,17 @@ function LoadProducts(existingItems) {
 
         targetDiv.appendChild(containerDiv);
     });
+
     var container = document.getElementById('container')
 
     var total = document.createElement('p');
-    total.textContent = "Totalt: " + totalPrice;
+    total.textContent = "Totalt: " + totalPrice + " kr";
 
     var purchaseButton = document.createElement("button")
     purchaseButton.textContent = "Köp"
     purchaseButton.onclick = function() {
         ClearList();
     };
-
     container.appendChild(total);
     container.appendChild(purchaseButton);
 }
