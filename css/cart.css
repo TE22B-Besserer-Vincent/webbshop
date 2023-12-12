@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
-
+:root {
+    --menu-color-primary: #40513B;
+    --menu-color-secondary: #EAC696;
+    --text-color-primary: black;
+    --text-color-secondary: white;
+    --font-size-large: calc(0.9rem + 0.75vw);
+    --font-size-medium: calc(0.70rem + 0.65vw);
+    --product-title: calc(1rem + 0.4vw);
+    --product-price: calc(1rem + 0.4vw);
+    --product-title-mobile: calc(0.9rem + 1vw);
+    --product-price-mobile: calc(0.9rem + 0.9vw);
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f5f5f5;
 }
 
 /* Styling för hemsidans header */
 
 header {
-    background-color: #333;
+    background-color: var(--menu-color-primary);
     color: white;
     padding: 10px;
     text-align: center;
@@ -35,6 +46,7 @@ header {
     width: 95%;
     height: 100px;
     border: 1px solid black;
+    background-color: white;
 }
 
 .product img {
@@ -52,13 +64,14 @@ header {
 }
 
 .product-info h2 {
-    font-size: calc(0.4em + 1rem);
+    font-size: var(--product-title-mobile);
     line-height: 0px;
 }
 
 .product-info p {
     font-size: calc(0.2em + 1rem);
     line-height: 0px;
+    font-size: var(--product-price-mobile);
 }
 
 .quantity {
@@ -78,7 +91,12 @@ header {
 /* Köp Knapp */
 
 .container button {
-    padding: 10px 20px;
+    padding: 12.5px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--menu-color-secondary);
+    color: white;
+    border: none;
 }
 
 @media (min-width: 600px) {  
@@ -89,6 +107,14 @@ header {
     .quantity input {
         width: 30px;
         height: 25px;
+    }
+
+    .product-info h2 {
+        font-size: var(--font-size-large);
+    }
+    
+    .product-info p {
+        font-size: var(--font-size-medium);
     }
 }
 

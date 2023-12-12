@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
-
 :root {
     --menu-color-primary: #40513B;
     --menu-color-secondary: #EAC696;
     --text-color-primary: black;
     --text-color-secondary: white;
+    --font-size-large: calc(0.5rem + 0.75vw);
+    --font-size-medium: calc(0.50rem + 0.60vw);
+    --product-title: calc(1rem + 0.4vw);
+    --product-price: calc(1rem + 0.4vw);
+    --product-title-mobile: calc(0.9rem + 0.5vw);
+    --product-price-mobile: calc(1rem + 0.25vw);
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f5f5f5;
 }
 
 /* Styling för hemsidans header */
@@ -21,12 +26,14 @@ header {
     color: var(--text-color-secondary);
     padding: 10px;
     text-align: center;
+    font-size: var(--font-size-large);
 }
 
 /* Icke-funktionell navbar som egentligen används för att leta efter produkter  */
 
 .navbar {
     display: flex;
+    align-items: center;
     max-width: 1200px;
     width: fit-content;
     margin: 40px auto;
@@ -38,7 +45,7 @@ header {
 
 .navbar a {
     display: none;
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     margin-right: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -70,7 +77,8 @@ header {
 .hamburger-menu {
     display: flex;
     left: 20px;
-    width: 25px; height: 25px;
+    width: 20px;
+    height: 20px;
     position: absolute;
 }
 
@@ -81,6 +89,7 @@ header {
     padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
+    margin: 20px auto;
     justify-content: space-between;
 }
 
@@ -95,20 +104,22 @@ header {
 
 .product img {
     width: 100%;
-    border: 0.5px var(--text-color-primary) solid;
+    border-radius: 10px;
+/*     border: 0.5px var(--text-color-primary) solid; */
 }
 
 .product h2 {
-    font-size: max(2vw, 16px);
+    font-size: var(--product-title-mobile)
 }
 
 .product p {
-    font-size: max(1.8vw, 14px); 
+    font-size: var(--product-price-mobile);
 }
+
 .product button {
     padding: 8px 30px;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     color: var(--text-color-primary);;
     background-color: var(--menu-color-secondary);;
     cursor: pointer;
@@ -126,11 +137,11 @@ header {
     }
 
     .product h2 {
-        font-size: max(1.8vw, 14px);
+        font-size: var(--product-title)
     }
     
     .product p {
-        font-size: max(1.6vw, 12px); 
+        font-size: var(--product-price)
     }
 
     .navbar a {
@@ -154,10 +165,10 @@ header {
     }
 
     .product h2 {
-        font-size: max(0.9vw, 14px);
-    }
+        font-size: var(--font-size-large);
+    }   
     
     .product p {
-        font-size: max(0.8vw, 12px);
+        font-size: var(--font-size-medium);
     }
 }
