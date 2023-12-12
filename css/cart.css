@@ -3,8 +3,8 @@
     --menu-color-secondary: #EAC696;
     --text-color-primary: black;
     --text-color-secondary: white;
-    --font-size-large: calc(0.9rem + 0.75vw);
-    --font-size-medium: calc(0.70rem + 0.65vw);
+    --font-size-large: calc(0.6rem + 0.75vw);
+    --font-size-medium: calc(0.40rem + 0.65vw);
     --product-title: calc(1rem + 0.4vw);
     --product-price: calc(1rem + 0.4vw);
     --product-title-mobile: calc(0.9rem + 1vw);
@@ -54,7 +54,7 @@ header {
 }
 
 .product-info {
-    margin-left: 10px;
+    margin-left: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
